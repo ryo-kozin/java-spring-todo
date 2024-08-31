@@ -1,0 +1,20 @@
+
+1. build
+docker build -t spring-boot-todo .
+
+2. run
+docker run --rm -p 8080:8080 spring-boot-todo
+
+
+3. get api
+curl -X GET http://localhost:8080/todos
+
+4. post api
+curl -X POST http://localhost:8080/todos -H "Content-Type: application/json" -d '{"title": "Learn Spring Boot", "completed": false}'
+
+5. put api
+curl -X PUT http://localhost:8080/todos/1 -H "Content-Type: application/json" -d '{"title": "Learn Spring Boot (updated)", "completed": true}'
+
+6. delete api
+curl -X DELETE http://localhost:8080/todos/1
+
